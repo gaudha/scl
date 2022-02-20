@@ -29,7 +29,7 @@ require "$GlblVar::SCLINSTALLDIR/sandhi/any_sandhi.pl";
 
 package main;
 
-if($GlblVar::VERSION eq "SERVER"){
+if($GlblVar::LOG eq "true"){
     if (! (-e "$GlblVar::TFPATH")){
         mkdir "$GlblVar::TFPATH" or die "Error creating directory $GlblVar::TFPATH";
     }
@@ -72,7 +72,7 @@ if($GlblVar::VERSION eq "SERVER"){
       $san = `$cmd`;
       $san=~s/,:/,/g;
 
-if($GlblVar::VERSION eq "SERVER"){
+if($GlblVar::LOG eq "true"){
       if($san){ 
             print TMP1 $ENV{'REMOTE_ADDR'}."\t".$ENV{'HTTP_USER_AGENT'}."\n\n"."encoding:$encoding\t"."word1:$word1\t"."word2:$word2###############\n\n"; 
       } else { 
