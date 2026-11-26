@@ -75,3 +75,5 @@ skt_gen/Sentence/paths.ml
 skt_gen/Sentence/sentence_generator
 skt_gen/compounds/paths.h
 spec.txt
+morph_bin/*.bin
+morph_bin/*.tgz
